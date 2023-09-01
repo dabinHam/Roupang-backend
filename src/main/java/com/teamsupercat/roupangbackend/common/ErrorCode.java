@@ -94,9 +94,10 @@ public enum ErrorCode {
     EMAIL_VERIFICATION_NOT_FOUND_USER(HttpStatus.NOT_FOUND , "해당 유저를 찾을 수 없습니다."),
     EMAIL_VERIFICATION_CODE_FAILED(HttpStatus.BAD_REQUEST,"인증 번호가 틀립니다."),
     EMAIL_VERIFICATION_EXPIRED_DATE(HttpStatus.BAD_REQUEST,"인증 시간이 만료되었습니다."),
-    EMAIL_VERIFICATION_SEND_FAILED(HttpStatus.BAD_REQUEST,"인증 메일 전송에 실패하였습니다.")
+    EMAIL_VERIFICATION_SEND_FAILED(HttpStatus.BAD_REQUEST,"인증 메일 전송에 실패하였습니다."),
 
-    ;
+    // 아임포트
+    IM_PORT_API_COMMUNICATION_ERROR(HttpStatus.SERVICE_UNAVAILABLE,"외부 서비스 또는 API와의 통신 중에 오류가 발생했습니다. 나중에 다시 시도해 주세요.");
 
     private final HttpStatus httpStatus;
     private final String errorMsg;
